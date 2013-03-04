@@ -5,6 +5,13 @@ A plugin for the bengine project, which will show new messages in the left menu 
 
 
 
+Requirements
+============
+
+To use this plugin you'll need to use at least the bengine at version 0.3.
+
+
+
 Installation
 ============
 

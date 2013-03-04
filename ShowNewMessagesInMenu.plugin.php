@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 sateffen
+ *  Copyright (C) 2013 sateffen
  *  https://github.com/sateffen/ShowNewMessagesInMenu-for-Bengine
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@ class ShowNewMessagesInMenu extends Recipe_PluginAbstract
 	public function __construct()
 	{
 		$this->pluginName = "Show new Messages in Menü";
-		$this->pluginVersion = "1.0";
+		$this->pluginVersion = "1.1";
 		return;
 	}
 
@@ -36,7 +36,7 @@ class ShowNewMessagesInMenu extends Recipe_PluginAbstract
 		
 		$unreadMessages = 0;
 		
-		while($row = Core::getDB()->fetch($result))
+		foreach($result->fetchAll() as $row)
 		{
 			$unreadMessages += ( $row["messages"] - (int) $row["read"] );
 		}
